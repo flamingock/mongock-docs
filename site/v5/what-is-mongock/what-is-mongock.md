@@ -12,8 +12,22 @@ eleventyNavigation:
     <img src="/images/mongock-logo-with-title.jpg" width="65%" alt="Mongock">
 </p>
 
-<div class="success">
-<b>Mongock 5 released!!</b> Please visit the <a href="/v5/from-version-4-to-5">upgrade page</a> to follow easy process. 
+<div class="warning">
+<b>Mongock is sunsetting — meet <a href="https://flamingock.io" target="_blank" rel="noopener">Flamingock</a>, its open-source successor.</b>
+<br><br>
+Mongock solved a focused problem: safe database evolution. Modern applications rarely evolve databases in isolation — a single domain change often touches multiple systems (database schemas, API contracts, Kafka event definitions, API gateway policies, content models, configuration stores). Flamingock extends Mongock's core principles to that broader scope, with all of Mongock's core functionality fully covered: database migrations, deterministic ordered execution, single-execution guarantee, and auditable ledger.
+<br><br>
+Mongock will continue receiving <b>critical bug fixes and security updates only</b>. All innovation is happening in Flamingock. Existing Mongock deployments migrate automatically — audit history is imported and previously executed changes are recognised as immutable historical records.
+<br><br>
+Read the full announcement: <a href="https://flamingock.io/blog/sunsetting-mongock/" target="_blank" rel="noopener">Sunsetting Mongock blog post</a>.
+</div>
+
+<div class="successAlt">
+<b>Ready to migrate? Move to Flamingock today.</b>
+<br><br>
+The transition is designed to be seamless — your existing ChangeUnits, audit history, and configuration carry over with minimal effort. You keep everything you built with Mongock and unlock a modern platform that governs stateful change across databases, APIs, event streams, and configuration stores.
+<br><br>
+Start on the migration guide now and join the growing community shipping with Flamingock: <a href="https://docs.flamingock.io/resources/coming-from-mongock" target="_blank" rel="noopener">Coming from Mongock →</a>
 </div>
 
 ## Introduction
