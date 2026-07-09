@@ -18,6 +18,15 @@
     <link href="/styles/util.css" rel="stylesheet" />
     <link href="/styles/prism-base16-ateliersulphurpool.light.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJD5X6BDNH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LJD5X6BDNH');
+    </script>
   </head>
 
   <body>
@@ -706,7 +715,7 @@ function changeVersion() {
 <p><div class="table-of-contents"><h2>Table of Contents</h2><ul><li><a href="#migrate-all"> migrate all</a></li><li><a href="#migrate-up-to-change-pro"> migrate up-to-change  PRO</a></li><li><a href="#undo-all-pro"> undo all  PRO</a></li><li><a href="#undo-up-to-change-pro"> undo up-to-change  PRO</a></li><li><a href="#state-db-pro"> state db  PRO</a></li><li><a href="#state-code-base-pro"> state code-base  PRO</a></li><li><a href="#state-compare-pro"> state compare  PRO</a></li></ul></div></p>
 <h1 id="migrate-all"><a class="header-anchor" href="#migrate-all">#</a> migrate all</h1>
 <p>Execute all the pending changeUnits, as the standard Mongock migration process.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock migrate all <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock migrate all -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
@@ -732,7 +741,7 @@ function changeVersion() {
 </p>
 <h1 id="migrate-up-to-change-pro"><a class="header-anchor" href="#migrate-up-to-change-pro">#</a> migrate up-to-change  <span class="professional"><a href="/pro/index.html">PRO</a></span></h1>
 <p>Execute the pending changeUnits until the specified <code>CHANGE_UNIT_ID</code> (included), as the standard Mongock migration process.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock migrate up-to-change <span class="token operator">&lt;</span>CHANGE_UNIT_ID<span class="token operator">></span> <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock migrate up-to-change <span class="token operator">&lt;</span>CHANGE_UNIT_ID<span class="token operator">></span> -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
@@ -766,7 +775,7 @@ function changeVersion() {
 <h1 id="undo-all-pro"><a class="header-anchor" href="#undo-all-pro">#</a> undo all  <span class="professional"><a href="/pro/index.html">PRO</a></span></h1>
 <p>Reverts all the changeUnits.</p>
 <p>This operation uses the methods annotated with <code>@RollbackExecution</code> and <code>@RollbackBeforeExecution</code> in the changeUnits.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock undo all <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock undo all -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
@@ -793,7 +802,7 @@ function changeVersion() {
 <h1 id="undo-up-to-change-pro"><a class="header-anchor" href="#undo-up-to-change-pro">#</a> undo up-to-change  <span class="professional"><a href="/pro/index.html">PRO</a></span></h1>
 <p>Reverts all the changeUnits until the specified <code>CHANGE_UNIT_ID</code> (included).</p>
 <p>This operation uses the methods annotated with <code>@RollbackExecution</code> and <code>@RollbackBeforeExecution</code> in the changeUnits.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock undo up-to-change <span class="token operator">&lt;</span>CHANGE_UNIT_ID<span class="token operator">></span> <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock undo up-to-change <span class="token operator">&lt;</span>CHANGE_UNIT_ID<span class="token operator">></span> -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
@@ -826,7 +835,7 @@ function changeVersion() {
 </p>
 <h1 id="state-db-pro"><a class="header-anchor" href="#state-db-pro">#</a> state db  <span class="professional"><a href="/pro/index.html">PRO</a></span></h1>
 <p>Show the current state of changes.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock state db <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock state db -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
@@ -852,7 +861,7 @@ function changeVersion() {
 </p>
 <h1 id="state-code-base-pro"><a class="header-anchor" href="#state-code-base-pro">#</a> state code-base  <span class="professional"><a href="/pro/index.html">PRO</a></span></h1>
 <p>List the existing code changeUnits and their current state.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock state code-base <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock state code-base -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
@@ -878,7 +887,7 @@ function changeVersion() {
 </p>
 <h1 id="state-compare-pro"><a class="header-anchor" href="#state-compare-pro">#</a> state compare  <span class="professional"><a href="/pro/index.html">PRO</a></span></h1>
 <p>Compare the existing code changeUnits with the current state of changes.</p>
-<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock state compare <span class="token parameter variable">-aj</span> <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
+<pre class="language-bash"><code class="language-bash"><div class="highlight-line">$ ./mongock state compare -aj <span class="token operator">&lt;</span>APP_JAR<span class="token operator">></span></div></code></pre>
 <table>
 <thead>
 <tr>
